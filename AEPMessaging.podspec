@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.dependency 'AEPEdge', '>= 1.1.0'
   s.dependency 'AEPEdgeIdentity', '>= 1.0.0'
 
-  s.source_files = 'AEPMessaging/Sources/**/*.swift', 'optimize/**/*.swift'
+  s.source_files = 'AEPMessaging/Sources/**/*.swift'
 
 end
