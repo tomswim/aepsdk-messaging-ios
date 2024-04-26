@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -22,6 +22,18 @@
 
 /* Begin PBXBuildFile section */
 		01B9DD6617C6AD6E99EE8472 /* Pods_E2EFunctionalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB180620A608D2821FE98F37 /* Pods_E2EFunctionalTests.framework */; };
+		1EB0A62F2B23F28B008B394F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF4462522785700A5DE31 /* ViewController.swift */; };
+		1EB0A6302B23F28B008B394F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF44C2522785700A5DE31 /* AppDelegate.swift */; };
+		1EB0A6312B23F28B008B394F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF4502522785700A5DE31 /* SceneDelegate.swift */; };
+		1EB0A6332B23F28B008B394F /* AEPMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925DF4A525227C4700A5DE31 /* AEPMessaging.framework */; };
+		1EB0A6342B23F28B008B394F /* Pods_MessagingDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F23BE01498B5A36EEE4CDC /* Pods_MessagingDemoApp.framework */; };
+		1EB0A6362B23F28B008B394F /* nativeMethodCallingSample.html in Resources */ = {isa = PBXBuildFile; fileRef = 2415598428D1217500729136 /* nativeMethodCallingSample.html */; };
+		1EB0A6372B23F28B008B394F /* ADBMobileConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 925DF44E2522785700A5DE31 /* ADBMobileConfig.json */; };
+		1EB0A6382B23F28B008B394F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925DF44A2522785700A5DE31 /* Main.storyboard */; };
+		1EB0A6392B23F28B008B394F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925DF4472522785700A5DE31 /* Assets.xcassets */; };
+		1EB0A63A2B23F28B008B394F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 925DF4482522785700A5DE31 /* LaunchScreen.storyboard */; };
+		1EB0A63C2B23F28B008B394F /* AEPMessaging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 925DF4A525227C4700A5DE31 /* AEPMessaging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EB0A63F2B23F28B008B394F /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B6165DA329A67AD90031B84D /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2402745C29FC424000884DFE /* TestableMessagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402745B29FC424000884DFE /* TestableMessagingDelegate.swift */; };
 		2402745D29FC424000884DFE /* TestableMessagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402745B29FC424000884DFE /* TestableMessagingDelegate.swift */; };
 		2402745E29FC424000884DFE /* TestableMessagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2402745B29FC424000884DFE /* TestableMessagingDelegate.swift */; };
@@ -172,6 +184,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1EB0A62A2B23F28B008B394F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922FFCE7251B2BBA00BCE010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 925DF4A425227C4700A5DE31;
+			remoteInfo = AEPMessaging;
+		};
+		1EB0A62C2B23F28B008B394F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 922FFCE7251B2BBA00BCE010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6165DA229A67AD90031B84D;
+			remoteInfo = NotificationService;
+		};
 		2414ED9A2899BAC50036D505 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 922FFCE7251B2BBA00BCE010 /* Project object */;
@@ -252,6 +278,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1EB0A63B2B23F28B008B394F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1EB0A63C2B23F28B008B394F /* AEPMessaging.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EB0A63E2B23F28B008B394F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1EB0A63F2B23F28B008B394F /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2414ED9C2899BAC50036D505 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +348,8 @@
 
 /* Begin PBXFileReference section */
 		093DC9CB668BBA547B0C9306 /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		1EB0A6432B23F28B008B394F /* AEPMessagingHeraldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEPMessagingHeraldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB0A6442B23F28C008B394F /* MessagingDemoApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MessagingDemoApp copy-Info.plist"; path = "/Users/tneuhold/git/github/tomswim/aepsdk-messaging-ios/MessagingDemoApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		2402745B29FC424000884DFE /* TestableMessagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableMessagingDelegate.swift; sourceTree = "<group>"; };
 		240F71FA26868F7100846587 /* SharedStateResult+Messaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SharedStateResult+Messaging.swift"; sourceTree = "<group>"; };
 		2414ED7F2899BA080036D505 /* MessagingDemoAppObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingDemoAppObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,6 +504,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1EB0A6322B23F28B008B394F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB0A6332B23F28B008B394F /* AEPMessaging.framework in Frameworks */,
+				1EB0A6342B23F28B008B394F /* Pods_MessagingDemoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2414ED7C2899BA080036D505 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +697,7 @@
 				922FFCF0251B2BBA00BCE010 /* Products */,
 				92BD7B0B251C0B7700C758CB /* Frameworks */,
 				2A4D31945863BC9FEBE21FE1 /* Pods */,
+				1EB0A6442B23F28C008B394F /* MessagingDemoApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -653,6 +713,7 @@
 				2414ED7F2899BA080036D505 /* MessagingDemoAppObjC.app */,
 				24B071A529072E9800F4B18A /* E2EFunctionalTestApp.app */,
 				B6165DA329A67AD90031B84D /* NotificationService.appex */,
+				1EB0A6432B23F28B008B394F /* AEPMessagingHeraldApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -846,6 +907,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1EB0A6282B23F28B008B394F /* AEPMessagingHeraldApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB0A6402B23F28B008B394F /* Build configuration list for PBXNativeTarget "AEPMessagingHeraldApp" */;
+			buildPhases = (
+				1EB0A62D2B23F28B008B394F /* [CP] Check Pods Manifest.lock */,
+				1EB0A62E2B23F28B008B394F /* Sources */,
+				1EB0A6322B23F28B008B394F /* Frameworks */,
+				1EB0A6352B23F28B008B394F /* Resources */,
+				1EB0A63B2B23F28B008B394F /* Embed Frameworks */,
+				1EB0A63D2B23F28B008B394F /* [CP] Embed Pods Frameworks */,
+				1EB0A63E2B23F28B008B394F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EB0A6292B23F28B008B394F /* PBXTargetDependency */,
+				1EB0A62B2B23F28B008B394F /* PBXTargetDependency */,
+			);
+			name = AEPMessagingHeraldApp;
+			productName = MessagingDemoApp;
+			productReference = 1EB0A6432B23F28B008B394F /* AEPMessagingHeraldApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2414ED7E2899BA080036D505 /* MessagingDemoAppObjC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2414ED952899BA0A0036D505 /* Build configuration list for PBXNativeTarget "MessagingDemoAppObjC" */;
@@ -1095,11 +1179,24 @@
 				2414ED7E2899BA080036D505 /* MessagingDemoAppObjC */,
 				9296BA802537BFC0002C88F7 /* UnitTests */,
 				B6165DA229A67AD90031B84D /* NotificationService */,
+				1EB0A6282B23F28B008B394F /* AEPMessagingHeraldApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1EB0A6352B23F28B008B394F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB0A6362B23F28B008B394F /* nativeMethodCallingSample.html in Resources */,
+				1EB0A6372B23F28B008B394F /* ADBMobileConfig.json in Resources */,
+				1EB0A6382B23F28B008B394F /* Main.storyboard in Resources */,
+				1EB0A6392B23F28B008B394F /* Assets.xcassets in Resources */,
+				1EB0A63A2B23F28B008B394F /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2414ED7D2899BA080036D505 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1202,6 +1299,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-E2EFunctionalTestApp/Pods-E2EFunctionalTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EB0A62D2B23F28B008B394F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessagingDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EB0A63D2B23F28B008B394F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessagingDemoApp/Pods-MessagingDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessagingDemoApp/Pods-MessagingDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MessagingDemoApp/Pods-MessagingDemoApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		335250ECBB78A4A9112F0E32 /* [CP] Embed Pods Frameworks */ = {
@@ -1485,6 +1621,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1EB0A62E2B23F28B008B394F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB0A62F2B23F28B008B394F /* ViewController.swift in Sources */,
+				1EB0A6302B23F28B008B394F /* AppDelegate.swift in Sources */,
+				1EB0A6312B23F28B008B394F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2414ED7B2899BA080036D505 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1658,6 +1804,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1EB0A6292B23F28B008B394F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 925DF4A425227C4700A5DE31 /* AEPMessaging */;
+			targetProxy = 1EB0A62A2B23F28B008B394F /* PBXContainerItemProxy */;
+		};
+		1EB0A62B2B23F28B008B394F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6165DA229A67AD90031B84D /* NotificationService */;
+			targetProxy = 1EB0A62C2B23F28B008B394F /* PBXContainerItemProxy */;
+		};
 		2414ED9B2899BAC50036D505 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilter = ios;
@@ -1785,6 +1941,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1EB0A6412B23F28B008B394F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3908C9B2C6C8F309DF735FAF /* Pods-MessagingDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = TestApps/MessagingDemoApp/MessagingDemoApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKGEE875K4;
+				INFOPLIST_FILE = "MessagingDemoApp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EB0A6422B23F28B008B394F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F4A4735D3FB26229C244BC /* Pods-MessagingDemoApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = TestApps/MessagingDemoApp/MessagingDemoApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FKGEE875K4;
+				INFOPLIST_FILE = "MessagingDemoApp copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2414ED962899BA0A0036D505 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9ADDB0B1BD3178D864C6041 /* Pods-MessagingDemoAppObjC.debug.xcconfig */;
@@ -2028,7 +2232,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.MessagingDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2052,7 +2256,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.MessagingDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2453,7 +2657,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.MessagingDemoApp.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2480,7 +2684,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.MessagingDemoApp.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adobe.AEPMessagingHeraldApp.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2492,6 +2696,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1EB0A6402B23F28B008B394F /* Build configuration list for PBXNativeTarget "AEPMessagingHeraldApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB0A6412B23F28B008B394F /* Debug */,
+				1EB0A6422B23F28B008B394F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2414ED952899BA0A0036D505 /* Build configuration list for PBXNativeTarget "MessagingDemoAppObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

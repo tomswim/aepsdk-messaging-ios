@@ -19,8 +19,9 @@ class NotificationService: UNNotificationServiceExtension {
 
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler
-        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         
+        bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
+        sendPostRequest()
         // defer this block to be executed to call the callback
         defer {
             contentHandler(bestAttemptContent ?? request.content)
@@ -39,6 +40,44 @@ class NotificationService: UNNotificationServiceExtension {
         }
     }
 
+    func sendPostRequest() {
+        // The URL for your API endpoint
+        guard let url = URL(string: "https://hooks.slack.com/services/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") else {
+            print("Invalid URL")
+            return
+        }
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/YY hh:mm:ss"
+
+        // The data you want to send in the request body
+        let body: [String: Any] = [
+            "text": "Test app received push at " + dateFormatter.string(from: date)
+        ]
+
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: body)
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.httpBody = jsonData
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let data = data {
+                    // Handle the response data
+                    let responseString = String(data: data, encoding: .utf8)
+                    print("Response: \(responseString ?? "")")
+                }
+            }
+
+            task.resume()
+        } catch {
+            print("Error encoding parameters: \(error)")
+        }
+    }
 }
 
 

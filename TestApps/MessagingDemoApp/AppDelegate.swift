@@ -47,12 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
             
             // configure
-            MobileCore.configureWith(appId: "")
+//            MobileCore.configureWith(appId: "ab2e6fae6a3f/945d83f20c1f/launch-0802c98aa73b-development") // AJO Ultimate CAN2 - PROD02 /AEPMessagingApp / Development
+            MobileCore.configureWith(appId: "b5a106e2c3d5/8112ee96523c/launch-85f685936545-development") // GBR9 AJO Prime PAT / AEPMessagingHeraldApp / Development
+//            MobileCore.configureWith(appId: "329eb41b1216/dbcaf0764bb0/launch-a4985feae364-development") // ajo-e2e-mobile-gbr9 / AEPMessagingHeraldApp / Development
             // set `messaging.useSandbox` to "true"  to test push notifications in debug environment (Apps signed with Development Certificate)
             #if DEBUG
                 let debugConfig = ["messaging.useSandbox": true]
                 MobileCore.updateConfigurationWith(configDict: debugConfig)
             #endif
+            
+//             Assurance.startSession(url: URL(string: "messagingdemo://?adb_validation_sessionid=b4a6b75e-a18c-44ca-b07a-dfbd219ca6fc")) // AJO Ultimate CAN2 - PROD02
+            Assurance.startSession(url: URL(string: "aepmessagingheraldapp://?adb_validation_sessionid=8149aa07-ef1f-4c9d-a88a-29079b36becf")) // GBR9 AJO Prime PAT / AEPMessagingHeraldApp / Development
+//            Assurance.startSession(url: URL(string: "aepmessageheraldapp://?adb_validation_sessionid=5a736674-0264-4a8e-8033-fb0f2f2d32b4")) // ajo-e2e-mobile-gbr9
         }
         
         registerForPushNotifications(application)
@@ -104,12 +110,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
 
     // Delegate method to handle a notification that arrived while the app was running in the foreground.
-    func userNotificationCenter(_: UNUserNotificationCenter,
-                                willPresent _: UNNotification,
-                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//    func userNotificationCenter(_: UNUserNotificationCenter,
+//                                willPresent _: UNNotification,
+//                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        print("userNotificationCenter1")
+//        completionHandler([.alert, .sound, .badge])
+//    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("userNotificationCenter2")
         completionHandler([.alert, .sound, .badge])
     }
 
+
+    
     // Delegate method is called when a notification is interacted with
     func userNotificationCenter(_: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,

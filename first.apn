@@ -1,0 +1,8 @@
+{
+  "aps": {
+    "alert": "New Posts!",
+    "sound": "default",
+    "link_url": "https://apple.com",
+    "category": "NEWS_CATEGORY"
+  }
+}
